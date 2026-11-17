@@ -13,6 +13,25 @@
 
 **Historical integration evidence does NOT prove that the NASA homepage's search form currently redirects to Search.gov or that any specific Search.gov host is in scope.**
 
+## Follow-up evidence: ordinary NASA search URL (2026-11-18)
+
+A researcher supplied the final browser URL from an ordinary search for **Artemis**:
+
+`https://www.nasa.gov/?search=artemis`
+
+This directly confirms that the browser's final visible **hostname** was `www.nasa.gov` and the search term was conveyed in the `search` URL query parameter. The researcher did not provide an HTTP archive, response headers, HTML source or a browser security trace.
+
+An independent **public-page text retrieval** of the same URL produced a search results page with the visible heading **“Search Results for: artemis”** and ordinary search results. The retrieval provider reports an earlier crawl, so it confirms what the retrieved public page contained, not necessarily today's fresh server response.
+
+### What can (and cannot) be concluded
+
+- **Confirmed:** the ordinary search route can be represented on `www.nasa.gov` with `?search=artemis`; the retrieved public page displayed the search term in a human-readable results heading.
+- **Not confirmed:** whether the raw HTML safely encodes all input; whether there is script execution; whether search input is reflected in HTML attributes, scripts or other contexts; which backend currently powers search; or whether any vulnerability exists.
+- **Scope boundary:** a browser-visible URL on the listed hostname is useful context but **does not authorize** arbitrary security testing of every related service. The live Bugcrowd restrictions and nonproduction rules continue to apply.
+- **No vulnerability report submitted.** Displaying a benign search term is expected behavior, not evidence of XSS.
+
+Minimal next technical step: in a controlled *offline* training page, contrast escaped vs unescaped interpolation of a user search query and verify the behavior with regression tests. Any actual NASA test must be limited to methods/environments explicitly covered by the current program.
+
 ## Security triage decision
 
 | Question | Current evidence | Decision |
