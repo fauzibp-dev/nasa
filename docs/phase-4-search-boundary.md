@@ -32,6 +32,8 @@ An independent **public-page text retrieval** of the same URL produced a search 
 
 Minimal next technical step: in a controlled *offline* training page, contrast escaped vs unescaped interpolation of a user search query and verify the behavior with regression tests. Any actual NASA test must be limited to methods/environments explicitly covered by the current program.
 
+> **Follow-up (2026-11-18):** A researcher later provided a full benign search-results HTML snapshot. See [Phase 5 HTML analysis](phase-5-html-source-analysis.md) for confirmed `?search=artemis` contexts and the `data-search-engine="vertex"` hint. Earlier statements below record the evidence available during Phase 4 and should not be treated as the latest HTML analysis.
+
 ## Security triage decision
 
 | Question | Current evidence | Decision |

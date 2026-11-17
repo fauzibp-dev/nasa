@@ -60,6 +60,8 @@ python tools/scope_guard.py https://example.org
 | `docs/phase-3-passive-research.md` | Actual public-page observations and research readiness notes |
 | `tools/search_boundary.py` | Offline classifier for NASA search navigation across service boundaries |
 | `docs/phase-4-search-boundary.md` | Search.gov historical integration, evidence limits and NO-GO decisions |
+| `tools/search_markup_review.py` | Offline context inventory for privately stored benign HTML snapshots (no secrets emitted) |
+| `docs/phase-5-html-source-analysis.md` | Sanitized analysis of the user-supplied NASA search HTML (not a vulnerability claim) |
 | `tests/` | Automated unit tests; no network traffic |
 | `.github/workflows/ci.yml` | Offline Python checks on pushes and PRs |
 

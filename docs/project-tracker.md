@@ -17,6 +17,8 @@ Date initialized: 2026-11-18. No claim of NASA authorization beyond the program'
 - [x] Gather five public-page feature observations and build deterministic offline triage and tests (not confirmed vulnerabilities).
 - [x] Review public evidence of NASA's 2023 Search.gov integration; note current backend remains unverified and third-party destinations are NO-GO absent scope authorization.
 - [x] Add offline URL handoff classifier and regression tests, with no network activity.
+- [x] Analyze researcher-supplied NASA search HTML offline: text/URL contexts, `data-search-engine="vertex"` hint, no observed inline-script term, no exploit demonstrated.
+- [x] Add privacy-preserving offline HTML source context review and synthetic regression tests.
 - [ ] Confirm Bugcrowd account access and the current target-level scope immediately before authorized testing.
 - [ ] Produce a valid, unique NASA finding (unpredictable; **not guaranteed**).
 - [ ] Submit any real finding privately to Bugcrowd (only if genuinely found).
