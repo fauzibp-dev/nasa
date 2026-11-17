@@ -17,6 +17,12 @@ def valid_dns_hostname(host: str) -> bool:
     labels = host.split(".")
     if len(labels) < 2:
         return False
+    # DNS-like dotted IP addresses are not permitted as scope entries.
+    try:
+        ipaddress.ip_address(host)
+        return False
+    except ValueError:
+        pass
     return all(
         1 <= len(label) <= 63
         and label[0].isalnum()
