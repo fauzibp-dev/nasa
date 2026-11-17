@@ -1,0 +1,80 @@
+{
+  "project": "NASA VDP passive public feature inventory",
+  "observed_at_utc": "2026-11-18",
+  "sources": {
+    "bugcrowd": "https://bugcrowd.com/engagements/nasa-vdp",
+    "nasa_vdp": "https://www.nasa.gov/vulnerability-disclosure-policy/"
+  },
+  "program_entries": [
+    {
+      "target": "NASA website",
+      "submission_target": "https://nasa.gov",
+      "hostnames_in_supplied_brief": [
+        "nasa.gov",
+        "www.nasa.gov"
+      ]
+    },
+    {
+      "target": "USGEO website",
+      "submission_target": "https://usgeo.gov/",
+      "hostnames_in_supplied_brief": [
+        "usgeo.gov"
+      ]
+    },
+    {
+      "target": "GLOBE website",
+      "submission_target": "https://globe.gov/",
+      "hostnames_in_supplied_brief": [
+        "globe.gov"
+      ]
+    }
+  ],
+  "passive_features": [
+    {
+      "target": "NASA website",
+      "public_url": "https://www.nasa.gov/",
+      "feature": "Public content search field",
+      "evidence": "https://www.nasa.gov/",
+      "assessment": "User input is accepted for site search; no reflection or execution tested",
+      "next_step": "Compare authorized local XSS lab with output-encoding best practices. Only evaluate real site behavior after live scope and test-method confirmation."
+    },
+    {
+      "target": "NASA website",
+      "public_url": "https://www.nasa.gov/",
+      "feature": "Content navigation and public links",
+      "evidence": "https://www.nasa.gov/",
+      "assessment": "Public navigation exists; no redirect flaw demonstrated",
+      "next_step": "Document only; do not probe redirect parameters without verifying an explicitly permitted feature."
+    },
+    {
+      "target": "USGEO website",
+      "public_url": "https://usgeo.gov/",
+      "feature": "Public informational pages and navigation",
+      "evidence": "https://usgeo.gov/",
+      "assessment": "Static informational surface observed; no security finding",
+      "next_step": "No active testing planned unless an eligible, low-impact feature is identified."
+    },
+    {
+      "target": "GLOBE website",
+      "public_url": "https://www.globe.gov/",
+      "feature": "Sign-in and account registration links",
+      "evidence": "https://www.globe.gov/",
+      "assessment": "Public navigation shows authentication-related features; no account behavior tested",
+      "next_step": "www.globe.gov must be verified as an authorized service before any tests; never use someone else's accounts."
+    },
+    {
+      "target": "GLOBE website",
+      "public_url": "https://www.globe.gov/globe-data",
+      "feature": "Data resources and links to data-entry services",
+      "evidence": "https://www.globe.gov/globe-data",
+      "assessment": "Public data links exist; related services may be on other hosts and are not automatically in scope",
+      "next_step": "Treat linked third-party or distinct service hosts as NO-GO until the current Bugcrowd service scope explicitly permits them."
+    }
+  ],
+  "status": {
+    "active_testing_performed": false,
+    "vulnerability_found": false,
+    "real_report_submitted": false,
+    "reminder": "Observed URLs and selected Bugcrowd scope entries are NOT permission to test a service or technique. Review live program rules before any active testing."
+  }
+}
