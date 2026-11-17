@@ -31,6 +31,8 @@ jobs:
         run: python tools/report_lint.py examples/xss-lab-report.md
       - name: Render offline public-surface inventory (no network targets)
         run: python tools/passive_surface.py
+      - name: Validate offline search-handoff service boundaries
+        run: python tools/search_boundary.py 'https://www.nasa.gov/' 'https://search.example.gov/results?q=artemis'
       - name: Verify default scope is empty
         run: |
           if grep -vE '^[[:space:]]*(#|$)' scope.txt | grep -q .; then
