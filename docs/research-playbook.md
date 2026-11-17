@@ -18,7 +18,7 @@ Before researching ANY external asset:
 2. Confirm a given hostname and *specific app/service* is listed in scope. A parent domain or similarly named service is NOT enough.
 3. Understand allowed test categories and banned test types. When in doubt, ask the program via the proper support channel.
 4. Record the UTC date of scope verification, the exact host, and an immutable reference to the relevant rules in a private log.
-5. Confirm the test is not likely to affect users, availability, or NASA missions; prefer non-production if provided.
+5. Confirm the test is not likely to affect users, availability, or NASA missions; **if a non-production or public test environment is available, NASA requires all testing exclusively there**.
 6. Do not perform network probing from this repository's CI. `scope_guard.py` is merely an offline deny-by-default reminder.
 
 **NO-GO** if scope is uncertain, third-party owned, sensitive data may be affected, or the program disallows the proposed method.

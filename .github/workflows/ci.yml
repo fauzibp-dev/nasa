@@ -25,6 +25,8 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Lint fictional lab report
         run: python tools/report_lint.py examples/lab-report.md
+      - name: Review local Python tools for risky syntax patterns
+        run: python tools/code_review.py tools --strict
       - name: Verify default scope is empty
         run: |
           if grep -vE '^[[:space:]]*(#|$)' scope.txt | grep -q .; then
