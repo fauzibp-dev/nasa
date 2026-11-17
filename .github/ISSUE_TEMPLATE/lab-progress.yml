@@ -1,0 +1,23 @@
+name: Legal lab practice
+description: Track progress on intentionally vulnerable local labs (NOT live vulnerabilities)
+title: '[LAB] '
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: 'Do not disclose live findings, production data, tokens, or NASA targets in GitHub issues.'
+  - type: input
+    id: lab
+    attributes:
+      label: Training lab
+      description: Use a local/demo lab or an authorized education platform only
+      placeholder: 'OWASP Juice Shop: access control practice'
+    validations:
+      required: true
+  - type: textarea
+    id: learning
+    attributes:
+      label: What I learned (no sensitive data)
+      placeholder: 'Summarize the concept, mitigation, and lessons'
+    validations:
+      required: true
