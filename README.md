@@ -7,7 +7,7 @@
 This repository supports **authorized, responsible vulnerability research** and clear disclosure reports. It is a *workspace*, not proof of having discovered a NASA vulnerability or received an award.
 
 ## Current status
-- Workspace and documentation: started 2026-11-18.
+- Workspace and documentation: started 2026-11-18.\n- Phase 2 offline XSS training added; findings remain synthetic.
 - External NASA targets tested: **none**.
 - Valid NASA reports submitted: **none**.
 - NASA Letter of Recognition received: **none**.
@@ -49,7 +49,7 @@ python tools/scope_guard.py https://example.org
 | `docs/recognition.md` | NASA award eligibility and evidence |
 | `scope.txt` | **Empty** exact-host allowlist, never a permission grant |
 | `tools/scope_guard.py` | Offline, exact-host scope reminder |
-| `tools/report_lint.py` | Offline sanitized report structure checker |
+| `tools/report_lint.py` | Offline sanitized report structure checker |\n| `labs/` | Offline IDOR, SQL injection and XSS examples (vulnerable vs fixed) |\n| `docs/phase-2-lab-guide.md` | Three-lab study guide and reproduction commands |
 | `tests/` | Automated unit tests; no network traffic |
 | `.github/workflows/ci.yml` | Offline Python checks on pushes and PRs |
 
@@ -57,7 +57,7 @@ python tools/scope_guard.py https://example.org
 
 ```bash
 python -m unittest discover -s tests -v
-python tools/report_lint.py examples/lab-report.md
+python tools/report_lint.py examples/lab-report.md\npython tools/report_lint.py examples/xss-lab-report.md
 ```
 
 The example is fabricated training content only; it does not claim a real NASA vulnerability.
