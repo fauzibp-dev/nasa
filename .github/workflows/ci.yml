@@ -25,7 +25,7 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Lint fictional lab report
         run: python tools/report_lint.py examples/lab-report.md
-      - name: Verify default scope is empty
+      - name: Lint fictional XSS lab report\n        run: python tools/report_lint.py examples/xss-lab-report.md\n      - name: Verify default scope is empty
         run: |
           if grep -vE '^[[:space:]]*(#|$)' scope.txt | grep -q .; then
             echo 'Unexpected real host added to public default scope.txt'
