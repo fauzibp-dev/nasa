@@ -17,6 +17,12 @@ def valid_dns_hostname(host: str) -> bool:
     labels = host.split(".")
     if len(labels) < 2:
         return False
+    try:
+        ipaddress.ip_address(host)
+    except ValueError:
+        pass
+    else:
+        return False
     return all(
         1 <= len(label) <= 63
         and label[0].isalnum()

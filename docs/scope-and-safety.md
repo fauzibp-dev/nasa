@@ -5,7 +5,7 @@ Source of truth: [NASA VDP](https://www.nasa.gov/vulnerability-disclosure-policy
 - [ ] Read the latest VDP and Bugcrowd brief immediately before testing.
 - [ ] Identify the exact host, asset and environment explicitly listed in the live scope; connected third-party services are excluded unless explicitly authorized.
 - [ ] Check prohibited test types, limitations, and reporting instructions.
-- [ ] Confirm production vs non-production; use a non-production or public test environment when available.
+- [ ] Confirm production vs non-production; when a non-production or public test environment is available, NASA requires **all testing exclusively there**.
 - [ ] Verify that my testing could not impact availability, other people's data, or NASA operations.
 - [ ] Ensure no automated scanner/tool is used unless explicitly allowed and compliant with program rules.
 - [ ] Use own accounts and minimum proof necessary; no credential attacks or exfiltration.
@@ -19,6 +19,8 @@ Source of truth: [NASA VDP](https://www.nasa.gov/vulnerability-disclosure-policy
 - Unauthorized access, modification or transfer of data
 - Automated-tool output with no evidence of real-world exploitability
 - Reports that only note missing headers, TLS configuration or versions without clear exploitability
+- Reports involving `/wp-json/wp/v2/users` or `xmlrpc.php` endpoints are not authorized under NASA's listed testing exclusions
+- Rate-limiting issues, directory listings, content/text spoofing and mere best-practice observations are excluded under the policy
 - Any asset outside the live in-scope targets
 
 ## Disclosure

@@ -7,7 +7,8 @@
 This repository supports **authorized, responsible vulnerability research** and clear disclosure reports. It is a *workspace*, not proof of having discovered a NASA vulnerability or received an award.
 
 ## Current status
-- Workspace and documentation: started 2026-11-18.\n- Phase 2 offline XSS training added; findings remain synthetic.
+- Workspace and documentation: started 2026-11-18.
+- Phase 2: synthetic offline XSS example and regression tests.
 - External NASA targets tested: **none**.
 - Valid NASA reports submitted: **none**.
 - NASA Letter of Recognition received: **none**.
@@ -49,7 +50,10 @@ python tools/scope_guard.py https://example.org
 | `docs/recognition.md` | NASA award eligibility and evidence |
 | `scope.txt` | **Empty** exact-host allowlist, never a permission grant |
 | `tools/scope_guard.py` | Offline, exact-host scope reminder |
-| `tools/report_lint.py` | Offline sanitized report structure checker |\n| `labs/` | Offline IDOR, SQL injection and XSS examples (vulnerable vs fixed) |\n| `docs/phase-2-lab-guide.md` | Three-lab study guide and reproduction commands |
+| `tools/report_lint.py` | Offline sanitized report structure checker |
+| `tools/code_review.py` | Local Python AST review flags (not proof of vulnerabilities) |
+| `labs/` | Offline IDOR, SQL injection, and XSS practice (unsafe vs repaired) |
+| `docs/phase-2-lab-guide.md` | Reproduction and remediation study guide |
 | `tests/` | Automated unit tests; no network traffic |
 | `.github/workflows/ci.yml` | Offline Python checks on pushes and PRs |
 
@@ -57,7 +61,9 @@ python tools/scope_guard.py https://example.org
 
 ```bash
 python -m unittest discover -s tests -v
-python tools/report_lint.py examples/lab-report.md\npython tools/report_lint.py examples/xss-lab-report.md
+python tools/report_lint.py examples/lab-report.md
+python tools/report_lint.py examples/xss-lab-report.md
+python tools/code_review.py labs
 ```
 
 The example is fabricated training content only; it does not claim a real NASA vulnerability.
@@ -65,6 +71,15 @@ The example is fabricated training content only; it does not claim a real NASA v
 ## Public repository safety
 
 Never commit real vulnerability proof-of-concept for unpatched services, raw HTTP traces containing live credentials, secrets, private user data, official Bugcrowd report details, or NASA non-public data. Keep report drafts and evidence in private, access-controlled storage. See [SECURITY.md](SECURITY.md).
+
+## Project tracking
+
+- [Engineering/CI readiness](https://github.com/fauzibp-dev/nasa/issues/1)
+- [Access-control lab](https://github.com/fauzibp-dev/nasa/issues/2)
+- [SQL injection lab](https://github.com/fauzibp-dev/nasa/issues/3)
+- [NASA VDP readiness gate](https://github.com/fauzibp-dev/nasa/issues/4)
+
+For offline Python source inspection see [docs/code-review.md](docs/code-review.md). Static flags are review leads only, not validated findings. GitHub Actions checks the engineering workspace, **never** probes NASA targets.
 
 ## Legacy starter migration
 The initial files were migrated from a separate GitHub practice branch. The original practice repository is left unchanged; subsequent improvements live here.
