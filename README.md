@@ -58,6 +58,8 @@ python tools/scope_guard.py https://example.org
 | `research/passive-surface-2026-11-18.json` | Five public-feature observations across three Bugcrowd scope entries (no findings) |
 | `tools/passive_surface.py` | Offline-only inventory classifier; never makes network requests |
 | `docs/phase-3-passive-research.md` | Actual public-page observations and research readiness notes |
+| `tools/search_boundary.py` | Offline classifier for NASA search navigation across service boundaries |
+| `docs/phase-4-search-boundary.md` | Search.gov historical integration, evidence limits and NO-GO decisions |
 | `tests/` | Automated unit tests; no network traffic |
 | `.github/workflows/ci.yml` | Offline Python checks on pushes and PRs |
 
@@ -69,6 +71,7 @@ python tools/report_lint.py examples/lab-report.md
 python tools/report_lint.py examples/xss-lab-report.md
 python tools/code_review.py labs
 python tools/passive_surface.py
+python tools/search_boundary.py 'https://www.nasa.gov/' 'https://search.example.gov/results?q=artemis'
 ```
 
 The example is fabricated training content only; it does not claim a real NASA vulnerability.
