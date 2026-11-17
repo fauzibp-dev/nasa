@@ -28,6 +28,7 @@ python tools/scope_guard.py https://example.org
 
 - [NASA Vulnerability Disclosure Policy](https://www.nasa.gov/vulnerability-disclosure-policy/) — version 1.6.2, dated April 30, 2026 (checked 2026-11-18)
 - [NASA Bugcrowd engagement](https://bugcrowd.com/engagements/nasa-vdp) — **official report channel**, review current engagement targets and rules
+- [Review of pasted Bugcrowd scope and exclusions (2026-11-18)](docs/bugcrowd-brief-review-2026-11-18.md) — source-specific notes, discrepancies, and mandatory live verification. **No external scans authorized by this document.**
 - [PortSwigger Web Security Academy](https://portswigger.net/web-security) — legal training labs
 - [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/) — deliberately vulnerable practice application
 
