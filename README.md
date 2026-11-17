@@ -55,6 +55,9 @@ python tools/scope_guard.py https://example.org
 | `tools/code_review.py` | Local Python AST review flags (not proof of vulnerabilities) |
 | `labs/` | Offline IDOR, SQL injection, and XSS practice (unsafe vs repaired) |
 | `docs/phase-2-lab-guide.md` | Reproduction and remediation study guide |
+| `research/passive-surface-2026-11-18.json` | Five public-feature observations across three Bugcrowd scope entries (no findings) |
+| `tools/passive_surface.py` | Offline-only inventory classifier; never makes network requests |
+| `docs/phase-3-passive-research.md` | Actual public-page observations and research readiness notes |
 | `tests/` | Automated unit tests; no network traffic |
 | `.github/workflows/ci.yml` | Offline Python checks on pushes and PRs |
 
@@ -65,6 +68,7 @@ python -m unittest discover -s tests -v
 python tools/report_lint.py examples/lab-report.md
 python tools/report_lint.py examples/xss-lab-report.md
 python tools/code_review.py labs
+python tools/passive_surface.py
 ```
 
 The example is fabricated training content only; it does not claim a real NASA vulnerability.
