@@ -6,7 +6,7 @@ Date initialized: 2026-11-18. No claim of NASA authorization beyond the program'
 
 - [x] Migrate starter documentation and source code to `fauzibp-dev/nasa`.
 - [x] Add offline exact-host scope guard and unit tests.
-- [x] Add deliberately vulnerable isolated training examples (IDOR and SQLi).
+- [x] Add deliberately vulnerable isolated training examples (IDOR and SQLi).\n- [x] Add local XSS output-encoding lab, unit tests and sanitized example report.
 - [x] Add report structure linter and a fictional example.
 - [x] Add GitHub Actions CI for offline checks.
 - [ ] Complete hands-on practice labs (requires actual learner participation).
@@ -24,7 +24,7 @@ Date initialized: 2026-11-18. No claim of NASA authorization beyond the program'
 | Official Bugcrowd submissions | 0 |
 | Valid/accepted NASA reports | 0 |
 | NASA Letters of Recognition | 0 |
-| Isolated lab samples | 2 (simulated IDOR, simulated SQLi) |
+| Isolated lab samples | 3 (simulated IDOR, simulated SQLi, simulated XSS) |
 
 Do not increase a metric based on assumption or theoretical bug, and do not place live findings into this public repository.
 
