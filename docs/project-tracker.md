@@ -13,6 +13,8 @@ Date initialized: 2026-11-18. No claim of NASA authorization beyond the program'
 - [x] Extract the 2026-11-18 user-provided NASA Bugcrowd brief into a review of scope, exclusions, and reporting rules (no testing conducted).
 - [ ] Verify the exact service-level scope against the *current authenticated* Bugcrowd engagement, especially the discrepancy with NASA's general policy, before any external testing.
 - [ ] Complete hands-on practice labs (requires actual learner participation).
+- [x] Review supplied Bugcrowd submission screenshot: exactly three target website choices (NASA, USGEO, GLOBE).
+- [x] Gather five public-page feature observations and build deterministic offline triage and tests (not confirmed vulnerabilities).
 - [ ] Confirm Bugcrowd account access and the current target-level scope immediately before authorized testing.
 - [ ] Produce a valid, unique NASA finding (unpredictable; **not guaranteed**).
 - [ ] Submit any real finding privately to Bugcrowd (only if genuinely found).
