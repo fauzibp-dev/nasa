@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
-from scope_guard import get_hostname, is_allowed, load_exact_hosts
+from scope_guard import get_hostname, is_allowed, load_exact_hosts, valid_dns_hostname
 
 
 class ScopeGuardTests(unittest.TestCase):
@@ -25,6 +25,12 @@ class ScopeGuardTests(unittest.TestCase):
                     "http://example.org/", "https://example.org/#fragment",
                     "https://127.0.0.1/", "https://localhost/"):
             self.assertIsNone(get_hostname(url), url)
+
+    def test_ip_addresses_are_never_authorized_as_dns_hosts(self):
+        self.assertFalse(valid_dns_hostname("127.0.0.1"))
+        self.assertFalse(valid_dns_hostname("192.168.1.1"))
+        self.assertFalse(is_allowed("https://127.0.0.1/", {"127.0.0.1"}))
+        self.assertFalse(valid_dns_hostname("*.example.org"))
 
     def test_file_validation(self):
         with tempfile.TemporaryDirectory() as directory:

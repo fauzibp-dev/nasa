@@ -4,6 +4,7 @@ Both examples run **entirely in memory**. There is no server, credential harvest
 
 - `idor_demo.py`: a broken object-level authorization check compared to a proper owner check
 - `sql_injection_demo.py`: unsafe SQL text construction compared to bound parameters in a temporary SQLite database
+- `xss_demo.py`: unsafe HTML interpolation compared to context-specific HTML escaping
 
 Run from the repository root:
 
