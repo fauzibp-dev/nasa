@@ -2,6 +2,8 @@
 
 Source of truth: [NASA VDP](https://www.nasa.gov/vulnerability-disclosure-policy/) and [live NASA Bugcrowd brief](https://bugcrowd.com/engagements/nasa-vdp). This summary is **not a scope grant**.
 
+See the [2026-11-18 review of the user-provided Bugcrowd brief](bugcrowd-brief-review-2026-11-18.md). Its listed entries are `nasa.gov`, `www.nasa.gov`, `usgeo.gov`, and `globe.gov`; this is **only a pasted snapshot**, not independent, live, service-level authorization. The NASA general policy also names `nspires.nasaprs.com` and `nsc.nasa.gov`, which did **not** appear in that pasted Bugcrowd target table. Treat mismatches as **NO-GO** pending clarification from the official program. Do not populate `scope.txt` from a general policy list.
+
 - [ ] Read the latest VDP and Bugcrowd brief immediately before testing.
 - [ ] Identify the exact host, asset and environment explicitly listed in the live scope; connected third-party services are excluded unless explicitly authorized.
 - [ ] Check prohibited test types, limitations, and reporting instructions.
