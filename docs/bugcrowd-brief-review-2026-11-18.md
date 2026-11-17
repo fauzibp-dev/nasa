@@ -10,12 +10,13 @@
 
 ## A. Listed targets in the supplied Bugcrowd copy
 
-| Entry in pasted Bugcrowd Scope | Assessment |
-|---|---|
-| `https://nasa.gov` | Listed in supplied snapshot; verify live |
-| `https://www.nasa.gov` | Listed in supplied snapshot; verify live |
-| `https://usgeo.gov/` | Listed in supplied snapshot; verify live |
-| `https://globe.gov/` | Listed in supplied snapshot; verify live |
+| Target website / scope row | Hostname(s) shown in supplied Bugcrowd table | Assessment |
+|---|---|---|
+| NASA (one website entry) | `nasa.gov` and `www.nasa.gov` | Same website entry with root and www forms; verify live |
+| USGEO | `usgeo.gov` | Listed in supplied snapshot; verify live |
+| GLOBE | `globe.gov` | Listed in supplied snapshot; verify live |
+
+**Count clarification:** The user-provided Bugcrowd table contains **three website entries**, not four independent website targets. The NASA entry displays both `nasa.gov` and `www.nasa.gov`, which are **two hostnames associated with one listed website**. This distinction does not broaden authorization for other subdomains, services or test types.
 
 The pasted brief says listed targets and **their subdomains within defined scope** may be tested, while separately saying **unlisted services are not authorized**. Interpret conservatively: the hostname alone does not authorize an unspecified connected service, third-party system, particular environment or test technique. Do not treat `*.nasa.gov` or any arbitrary subdomain as automatically permitted.
 
