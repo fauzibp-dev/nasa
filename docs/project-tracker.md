@@ -10,6 +10,8 @@ Date initialized: 2026-11-18. No claim of NASA authorization beyond the program'
 - [x] Add isolated synthetic XSS text-context escaping lab and tests.
 - [x] Add report structure linter and a fictional example.
 - [x] Add GitHub Actions CI for offline checks.
+- [x] Extract the 2026-11-18 user-provided NASA Bugcrowd brief into a review of scope, exclusions, and reporting rules (no testing conducted).
+- [ ] Verify the exact service-level scope against the *current authenticated* Bugcrowd engagement, especially the discrepancy with NASA's general policy, before any external testing.
 - [ ] Complete hands-on practice labs (requires actual learner participation).
 - [ ] Confirm Bugcrowd account access and the current target-level scope immediately before authorized testing.
 - [ ] Produce a valid, unique NASA finding (unpredictable; **not guaranteed**).
