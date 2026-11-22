@@ -28,6 +28,29 @@ class SearchSnapshotCompareTests(unittest.TestCase):
         self.assertFalse(result["script_execution_tested"])
         self.assertEqual(result["network_requests"], 0)
 
+    def test_old_term_in_second_snapshot_can_be_static_article_content(self):
+        second = SECOND + '<h3>Artemis news still indexed</h3>'
+        result = compare_snapshots(FIRST, second, "artemis", "OrbitStudy2026")
+        self.assertEqual(
+            result["cross_snapshot_context_counts"]["first_term_in_second_snapshot"],
+            {"other_text": 1},
+        )
+        self.assertEqual(
+            result["cross_snapshot_context_counts"]["second_term_in_first_snapshot"],
+            {},
+        )
+        self.assertFalse(result["vulnerability_confirmed"])
+
+    def test_cross_snapshot_counts_do_not_leak_private_attributes(self):
+        secret = "PRIVATE-CUSTOM-TOKEN"
+        second = SECOND + '<div data-session="' + secret + '">Artemis</div>'
+        result = compare_snapshots(FIRST, second, "artemis", "OrbitStudy2026")
+        self.assertNotIn(secret, repr(result))
+        self.assertEqual(
+            result["cross_snapshot_context_counts"]["first_term_in_second_snapshot"],
+            {"other_text": 1},
+        )
+
     def test_search_term_not_observed_is_inconclusive(self):
         result = compare_snapshots(FIRST, FIRST, "artemis", "OrbitStudy2026")
         self.assertFalse(result["second_term_present"])
