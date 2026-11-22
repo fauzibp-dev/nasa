@@ -19,6 +19,8 @@ Date initialized: 2026-11-18. No claim of NASA authorization beyond the program'
 - [x] Add offline URL handoff classifier and regression tests, with no network activity.
 - [x] Analyze researcher-supplied NASA search HTML offline: text/URL contexts, `data-search-engine="vertex"` hint, no observed inline-script term, no exploit demonstrated.
 - [x] Add privacy-preserving offline HTML source context review and synthetic regression tests.
+- [x] Implement an offline comparison tool for two benign search page snapshots; synthetic unit tests do not contact NASA.
+- [ ] Obtain and privately compare a distinct, benign second search page only after verifying current service restrictions; do not commit unredacted HTML.
 - [ ] Confirm Bugcrowd account access and the current target-level scope immediately before authorized testing.
 - [ ] Produce a valid, unique NASA finding (unpredictable; **not guaranteed**).
 - [ ] Submit any real finding privately to Bugcrowd (only if genuinely found).
