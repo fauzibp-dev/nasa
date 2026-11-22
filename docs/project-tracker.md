@@ -20,7 +20,9 @@ Date initialized: 2026-11-18. No claim of NASA authorization beyond the program'
 - [x] Analyze researcher-supplied NASA search HTML offline: text/URL contexts, `data-search-engine="vertex"` hint, no observed inline-script term, no exploit demonstrated.
 - [x] Add privacy-preserving offline HTML source context review and synthetic regression tests.
 - [x] Implement an offline comparison tool for two benign search page snapshots; synthetic unit tests do not contact NASA.
-- [ ] Obtain and privately compare a distinct, benign second search page only after verifying current service restrictions; do not commit unredacted HTML.
+- [x] Compare the second ordinary search HTML snapshot (`OrbitStudy2026`) against `artemis` offline and document only safe context counts, with no raw sources committed.
+- [x] Add cross-snapshot term counting; the old term appears in 13 content contexts in the second file, supporting caution about static content vs input propagation.
+- [ ] Before any active security experiments, independently confirm exact service/method eligibility and whether nonproduction testing is required.
 - [ ] Confirm Bugcrowd account access and the current target-level scope immediately before authorized testing.
 - [ ] Produce a valid, unique NASA finding (unpredictable; **not guaranteed**).
 - [ ] Submit any real finding privately to Bugcrowd (only if genuinely found).

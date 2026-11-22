@@ -34,6 +34,10 @@ def compare_snapshots(first_html: str, second_html: str,
         raise ValueError("HTML snapshots must be text")
     first = review_source(first_html, first_term)
     second = review_source(second_html, second_term)
+    # Cross-check terms against the opposite snapshot. Static articles can
+    # contain the first search term even when the query itself has changed.
+    old_term_in_second = review_source(second_html, first_term)
+    new_term_in_first = review_source(first_html, second_term)
     found = sum(second["counted_elements"].values()) > 0
     return {
         "first_snapshot": {
@@ -45,6 +49,10 @@ def compare_snapshots(first_html: str, second_html: str,
             "engine_hints": second["public_engine_hints"],
         },
         "second_term_present": found,
+        "cross_snapshot_context_counts": {
+            "first_term_in_second_snapshot": old_term_in_second["counted_elements"],
+            "second_term_in_first_snapshot": new_term_in_first["counted_elements"],
+        },
         "interpretation": (
             "SECOND_BENIGN_TERM_OBSERVED__REFLECTION_POSSIBLE_NOT_PROVEN"
             if found else "SECOND_TERM_NOT_OBSERVED__NO_CONCLUSION"
