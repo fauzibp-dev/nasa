@@ -62,6 +62,8 @@ python tools/scope_guard.py https://example.org
 | `docs/phase-4-search-boundary.md` | Search.gov historical integration, evidence limits and NO-GO decisions |
 | `tools/search_markup_review.py` | Offline context inventory for privately stored benign HTML snapshots (no secrets emitted) |
 | `docs/phase-5-html-source-analysis.md` | Sanitized analysis of the user-supplied NASA search HTML (not a vulnerability claim) |
+| `tools/search_snapshot_compare.py` | Offline-only benign two-snapshot HTML context comparison |
+| `docs/phase-6-snapshot-comparison.md` | Private HTML comparison procedure, limits and reporting rules |
 | `tests/` | Automated unit tests; no network traffic |
 | `.github/workflows/ci.yml` | Offline Python checks on pushes and PRs |
 
