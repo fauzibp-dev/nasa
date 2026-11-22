@@ -9,6 +9,7 @@ This repository supports **authorized, responsible vulnerability research** and 
 ## Current status
 - Workspace and documentation: started 2026-11-18.
 - Phase 2: synthetic offline XSS example and regression tests.
+- Phase 7: two benign NASA search HTML snapshots compared **offline** with cross-snapshot context counts; no confirmed vulnerability.
 - External NASA targets tested: **none**.
 - Valid NASA reports submitted: **none**.
 - NASA Letter of Recognition received: **none**.
