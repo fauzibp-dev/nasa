@@ -49,6 +49,10 @@ python -m unittest discover -s tests -v
 
 The checker prints only counts and safe enumerated hints, and never opens network connections. Do **not** commit source snapshots: HTML may contain transient attribution or form values and other material irrelevant to a public portfolio. Use redacted reports, not raw HTML.
 
+## Follow-up: synthetic two-snapshot analysis workflow
+
+[Phase 6 comparison protocol](phase-6-snapshot-comparison.md) now contains a no-network comparison tool that can distinguish whether a second **unique benign** term appears in the same broad HTML contexts. A second real snapshot has **not** been supplied yet; the comparator cannot verify XSS or prove input escaping.
+
 ## Security decision
 
 - **Current result: inconclusive for XSS, no confirmed security vulnerability.**
